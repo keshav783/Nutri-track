@@ -1,8 +1,7 @@
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../lib/AuthContext';
-import { useProfile } from '../lib/ProfileContext';
+import { useAuth } from './AuthContext';
+import { useProfile } from './ProfileContext';
 
-// requireProfile=true means: user must have completed the intake form
 export default function ProtectedRoute({ children, requireProfile = false }) {
   const { user, loading: authLoading } = useAuth();
   const { profile, loading: profileLoading } = useProfile();
