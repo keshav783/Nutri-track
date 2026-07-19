@@ -1,9 +1,9 @@
 import { useEffect, useState, useCallback } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { supabase } from '../lib/supabaseClient';
-import { useAuth } from '../lib/AuthContext';
-import { useProfile } from '../lib/ProfileContext';
-import ProgressBar from '../components/ProgressBar';
+import { supabase } from './supabaseClient';
+import { useAuth } from './AuthContext';
+import { useProfile } from './ProfileContext';
+import ProgressBar from './ProgressBar';
 import FoodLog from './FoodLog';
 
 function todayStr() {
