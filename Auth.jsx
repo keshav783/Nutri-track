@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useAuth } from '../lib/AuthContext';
+import { useAuth } from './AuthContext';
 
 export default function Auth() {
   const { signInWithEmail, signUpWithEmail, signInWithGoogle } = useAuth();
-  const [mode, setMode] = useState('signin'); // 'signin' | 'signup'
+  const [mode, setMode] = useState('signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
