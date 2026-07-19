@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
-import { AuthProvider, useAuth } from './lib/AuthContext';
-import { ProfileProvider, useProfile } from './lib/ProfileContext';
-import ProtectedRoute from './components/ProtectedRoute';
-import Auth from './pages/Auth';
-import IntakeForm from './pages/IntakeForm';
-import Dashboard from './pages/Dashboard';
+import { AuthProvider, useAuth } from './AuthContext';
+import { ProfileProvider, useProfile } from './ProfileContext';
+import ProtectedRoute from './ProtectedRoute';
+import Auth from './Auth';
+import IntakeForm from './IntakeForm';
+import Dashboard from './Dashboard';
 
 function NavBar() {
   const { user, signOut } = useAuth();
