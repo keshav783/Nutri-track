@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { supabase } from '../lib/supabaseClient';
-import { useAuth } from '../lib/AuthContext';
+import { supabase } from './supabaseClient';
+import { useAuth } from './AuthContext';
 
 const MEAL_TYPES = ['breakfast', 'lunch', 'dinner', 'snack'];
 
@@ -17,7 +17,7 @@ const manualEmpty = {
 
 export default function FoodLog({ selectedDate, onLogged }) {
   const { user } = useAuth();
-  const [tab, setTab] = useState('search'); // 'search' | 'manual'
+  const [tab, setTab] = useState('search');
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [searching, setSearching] = useState(false);
@@ -30,7 +30,6 @@ export default function FoodLog({ selectedDate, onLogged }) {
     setSearching(true);
     setError('');
     try {
-      // Open Food Facts — free, no API key required
       const res = await fetch(
         `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(
           query
