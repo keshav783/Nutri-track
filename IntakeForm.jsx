@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '../lib/supabaseClient';
-import { useAuth } from '../lib/AuthContext';
-import { useProfile } from '../lib/ProfileContext';
-import { ACTIVITY_MULTIPLIERS, computeAllTargets } from '../lib/calculations';
+import { supabase } from './supabaseClient';
+import { useAuth } from './AuthContext';
+import { useProfile } from './ProfileContext';
+import { ACTIVITY_MULTIPLIERS, computeAllTargets } from './calculations';
 
 const emptyForm = {
   age: '',
